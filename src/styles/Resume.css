@@ -1,0 +1,88 @@
+.resume {
+  position: relative;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.resume-header .section-subtitle {
+  margin: 0 auto;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.resume-preview {
+  padding: 32px;
+}
+
+.resume-preview h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent-cyan);
+}
+
+.resume-timeline-item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 24px;
+  border-left: 2px solid var(--border-color);
+}
+
+.resume-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+}
+
+.resume-timeline-item .title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.resume-timeline-item .org {
+  color: var(--accent-purple);
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+.resume-timeline-item .period {
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resume-actions .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 18px 32px;
+}
+
+@media (max-width: 768px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
