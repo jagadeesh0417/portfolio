@@ -24,6 +24,8 @@ const experiences = [
 ]
 
 export default function Resume() {
+  const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`
+
   return (
     <section id="resume" className="resume">
       <div className="container">
@@ -78,10 +80,10 @@ export default function Resume() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <a href="/resume.pdf" download className="btn btn-primary">
+            <a href={resumeUrl} download className="btn btn-primary">
               <FiDownload /> Download Resume (PDF)
             </a>
-            <button className="btn btn-secondary" onClick={() => window.open('/resume.pdf', '_blank')}>
+            <button className="btn btn-secondary" onClick={() => window.open(resumeUrl, '_blank')}>
               <FiEye /> View Online
             </button>
             <div className="glass-card" style={{ padding: 24 }}>
